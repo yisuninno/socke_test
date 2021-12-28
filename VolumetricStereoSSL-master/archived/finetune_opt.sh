@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=6666 finetune_opt.py --start_ep=1 --resume=checkpoint/VR_v10_2/sf_disp_epoch_20.pth --nEpochs=1 --dataset=3 --batchSize=1 --threads=1 --crop_height=240 --crop_width=576 --save_path=./checkpoint/VR_v10/test
